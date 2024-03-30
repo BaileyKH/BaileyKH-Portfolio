@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-backgroundWhite font-poppins text-primaryGray
+  }
+  h1{
+    @apply text-3xl font-black tracking-wide
+  }
+  h2{
+    @apply text-2xl
+  }
+  p,
+  a{
+    @apply font-semibold tracking-wide
+  }
+  a{
+    @apply no-underline transition hover:text-primaryRed
+  }
+}
