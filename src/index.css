@@ -17,6 +17,6 @@
     @apply font-semibold tracking-wide
   }
   a{
-    @apply no-underline transition hover:text-primaryRed
+    @apply no-underline transition hover:text-primaryRed cursor-pointer
   }
 }
