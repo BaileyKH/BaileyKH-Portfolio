@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-backgroundWhite font-poppins text-primaryGray
+    @apply bg-backgroundWhite font-poppins text-primaryGray scroll-smooth
   }
   h1{
     @apply text-3xl font-black tracking-wide

@@ -6,7 +6,7 @@ import img from '/src/assets/headshot.png'
 
 export const Hero = () => {
     return(
-        <div className="flex justify-center items-center h-screen mx-48 px-10">
+        <div className="flex justify-center items-center h-screen mx-52 px-10">
             <div className="flex">
                 <div className="w-1/2 flex flex-col">
                     <h1 className="text-6xl pb-5 font-bold">Front-End React Developer</h1>
