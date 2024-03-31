@@ -1,14 +1,14 @@
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3Alt, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
-import img from '/src/assets/headshot.png'
+import img from '/src/assets/headshot-s.jpg'
 
 
 export const Hero = () => {
     return(
-        <div className="flex justify-center items-center h-screen mx-52 px-10">
+        <div className="flex justify-center items-center h-screen mx-52 mt-12 px-10">
             <div className="flex">
-                <div className="w-1/2 flex flex-col">
+                <div className="w-2/3 flex flex-col">
                     <h1 className="text-6xl pb-5 font-bold">Front-End React Developer</h1>
                     <p className="pb-6 leading-relaxed">Hello! I'm Bailey Henderson and I am Front-End React <span className="line-through">addict</span> Developer currently based in Laveen, Arizona 🌵</p>
                     <div className="flex pb-6 justify-start items-center ">
@@ -27,8 +27,8 @@ export const Hero = () => {
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" className="h-[31.5px] w-[31.5px] icon"/>
                     </div>
                 </div>
-                <div className="w-1/2 flex justify-center items-start">
-                    <img src={img} className="rounded-3xl border-4 border-primaryRed"/>
+                <div className="w-1/3 flex justify-end items-start">
+                    <img src={img} className="rounded-full border-4 border-primaryRed"/>
                 </div>
             </div>
         </div>
