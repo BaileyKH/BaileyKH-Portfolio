@@ -10,8 +10,8 @@ export const Hero = () => {
             <div className="flex">
                 <div className="w-1/2 flex flex-col">
                     <h1 className="text-6xl pb-5 font-bold">Front-End React Developer</h1>
-                    <p className="pb-5 leading-relaxed">Hello! I'm Bailey Henderson and I am Front-End React <span className="line-through">addict</span> Developer currently based in Laveen, Arizona 🌵</p>
-                    <div className="flex pb-5 justify-start items-center ">
+                    <p className="pb-6 leading-relaxed">Hello! I'm Bailey Henderson and I am Front-End React <span className="line-through">addict</span> Developer currently based in Laveen, Arizona 🌵</p>
+                    <div className="flex pb-6 justify-start items-center ">
                         <a href="https://github.com/BaileyKH" target="_blank"><IconBrandGithub stroke={1} className="w-12 h-12 pr-1 cursor-pointer"/></a>
                         <a><IconBrandLinkedin stroke={1} className="w-12 h-12" /></a>
                     </div>
