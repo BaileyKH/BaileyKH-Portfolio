@@ -1,4 +1,6 @@
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHtml5, faCss3Alt, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import img from '/src/assets/headshot.png'
 
 
@@ -16,8 +18,13 @@ export const Hero = () => {
                     <div className="flex items-start">
                     <a href="./filepath/filename.pdf" download><button className="bg-primaryRed px-3 py-2 rounded-lg text-backgroundWhite">Download Resume</button></a>
                     </div>
-                    <div className="mt-24">
-                        <h2 className="font-semibold ">Stack |</h2>
+                    <div className="mt-24 flex justify-start items-center">
+                        <h2 className="font-semibold mr-4">Stack |</h2>
+                        <FontAwesomeIcon icon={faHtml5} style={{color: "#e54c26",}} className="icon"/>
+                        <FontAwesomeIcon icon={faCss3Alt} style={{color: "#264de4",}} className="icon"/>
+                        <FontAwesomeIcon icon={faJs} style={{color: "#f0db4f",}} className="icon"/>
+                        <FontAwesomeIcon icon={faReact} style={{color: "#61dbfb",}} className="icon"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" className="h-[31.5px] w-[31.5px] icon"/>
                     </div>
                 </div>
                 <div className="w-1/2 flex justify-center items-start">

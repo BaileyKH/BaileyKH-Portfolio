@@ -19,4 +19,7 @@
   a{
     @apply no-underline transition hover:text-primaryRed cursor-pointer
   }
+  .icon{
+    @apply text-4xl mr-4 transition hover:-translate-y-2
+  }
 }
