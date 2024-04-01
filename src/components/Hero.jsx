@@ -16,7 +16,7 @@ export const Hero = () => {
                         <a><IconBrandLinkedin stroke={1} className="w-12 h-12" /></a>
                     </div>
                     <div className="flex items-start">
-                    <a href="./filepath/filename.pdf" download><button className="bg-primaryRed px-3 py-2 rounded-lg text-backgroundWhite">Download Resume</button></a>
+                    {/* <a href="./filepath/filename.pdf" download><button className="bg-primaryRed px-3 py-2 rounded-lg text-backgroundWhite">Download Resume</button></a> */}
                     </div>
                     <div className="mt-24 flex justify-start items-center">
                         <h1 className="font-semibold mr-4">Stack |</h1>
