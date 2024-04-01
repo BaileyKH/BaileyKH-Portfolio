@@ -10,7 +10,7 @@ export const Hero = () => {
             <div className="flex">
                 <div className="w-2/3 flex flex-col">
                     <h1 className="text-6xl pb-5 font-bold">Front-End React Developer</h1>
-                    <p className="pb-6 leading-relaxed">Hello! I'm Bailey Henderson and I am Front-End React <span className="line-through">addict</span> Developer currently based in Laveen, Arizona 🌵</p>
+                    <p className="pb-8 text-lg font-light leading-relaxed">Hello! I'm Bailey Henderson and I am Front-End React <span className="line-through">addict</span> Developer currently based in Laveen, Arizona 🌵</p>
                     <div className="flex pb-6 justify-start items-center ">
                         <a href="https://github.com/BaileyKH" target="_blank"><IconBrandGithub stroke={1} className="w-12 h-12 pr-1 cursor-pointer"/></a>
                         <a><IconBrandLinkedin stroke={1} className="w-12 h-12" /></a>
@@ -19,7 +19,7 @@ export const Hero = () => {
                     <a href="./filepath/filename.pdf" download><button className="bg-primaryRed px-3 py-2 rounded-lg text-backgroundWhite">Download Resume</button></a>
                     </div>
                     <div className="mt-24 flex justify-start items-center">
-                        <h2 className="font-semibold mr-4">Stack |</h2>
+                        <h1 className="font-semibold mr-4">Stack |</h1>
                         <FontAwesomeIcon icon={faHtml5} style={{color: "#e54c26",}} className="icon"/>
                         <FontAwesomeIcon icon={faCss3Alt} style={{color: "#264de4",}} className="icon"/>
                         <FontAwesomeIcon icon={faJs} style={{color: "#f0db4f",}} className="icon"/>
