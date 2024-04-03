@@ -6,7 +6,7 @@ export const AboutMe = () => {
             <div className="w-screen">
                 <div className="flex px-12 py-20 drop-shadow-lg">
                     <div id="aboutme" className="w-1/2">
-                        <img src={img2} className="rounded-l-xl"/>
+                        <img src={img2} className="rounded-l-xl" alt="laptop sitting on desk"/>
                     </div>
                     <div className="w-1/2 flex flex-col justify-center items-start bg-primaryGray px-8 rounded-r-xl">
                         <h2 className="about-me text-lg text-primaryRed font-semibold pb-4">ABOUT ME</h2>

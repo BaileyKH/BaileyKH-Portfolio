@@ -28,7 +28,7 @@ export const Hero = () => {
                     </div>
                 </div>
                 <div className="w-1/3 flex justify-end items-start">
-                    <img src={img} className="rounded-full border-4 border-primaryRed"/>
+                    <img src={img} className="rounded-full border-4 border-primaryRed" alt="headshot of Bailey Henderson"/>
                 </div>
             </div>
         </div>
