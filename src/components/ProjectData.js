@@ -14,7 +14,7 @@ export const projects = [
         id: 2,
         title: "Jammming",
         img: Jammming,
-        description: "Jammming is a music website that allows a user to search for songs or a specific artist, then displays the most relevant results. After displaying the results, the user can then add thier choice of songs to a custom playlist, which can then be directly saved to their personal spotify account. ",
+        description: "Utilizing the SpotifyAPI, Jammming is a music website that allows a user to search for songs or a specific artist, then displays the most relevant results. After displaying the results, the user can then add thier choice of songs to a custom playlist, which can then be directly saved to their personal spotify account. ",
         code: "https://github.com/BaileyKH/Jammming",
         demo: "https://playlistcreation.netlify.app/"
     },

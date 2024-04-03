@@ -4,14 +4,12 @@ import { IconExternalLink, IconCode } from '@tabler/icons-react';
 
 export const Projects = () => {
 
-    const filteredProjects = projects.filter((project) => project.id <= 2);
-
     return(
         <div id="projects" className="flex flex-col">
             <div className="mx-40 my-28 ">
                 <h2 className=" text-primaryRed font-semibold">Projects</h2>
                 <p>Elegant Code, Engaging Designs</p>
-                {filteredProjects.map((project) => (
+                {projects.map((project) => (
                 <div className="flex py-10 justify-evenly items-center bg-white mt-8 pl-8 rounded-lg">
                     <div className="w-1/2 flex justify-center items-center">
                         <img src={project.img} className="w-fit h-auto rounded-lg"/>
@@ -23,9 +21,9 @@ export const Projects = () => {
                             <h3 className="font-bold text-md tracking-wide">Made With</h3>
                             <div className="flex">
                                 <p className="font-normal text-md px-1">React</p>
-                                <p className="font-normal text-md px-1">SCSS</p>
+                                <p className="font-normal text-md px-1">CSS</p>
                             </div>
-                            <p className="font-light text-sm">(Currently being converted from SCSS to Tailwind CSS)</p>
+                            <p className="font-light text-sm">(Currently being converted from CSS to Tailwind CSS)</p>
                         </div>
                         <div className="flex justify-evenly mt-8">
                             <div className="flex justify-center items-center bg-primaryGray text-white rounded-lg mx-2 py-1 px-2"><a href={project.demo} target="_blank" className="flex justify-center items-center">

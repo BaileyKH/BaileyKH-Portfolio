@@ -20,7 +20,7 @@
     @apply no-underline transition hover:text-primaryRed cursor-pointer
   }
   .icon{
-    @apply text-5xl mr-6 transition hover:-translate-y-2
+    @apply text-5xl mr-6 transition hover:-translate-y-2 ease-in-out
   }
   .about-me {
     @apply text-white
