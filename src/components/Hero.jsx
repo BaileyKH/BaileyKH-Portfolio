@@ -13,7 +13,7 @@ export const Hero = () => {
                     <p className="pb-8 text-lg font-light leading-relaxed">Hello! I'm Bailey Henderson and I am Front-End React <span className="line-through">addict</span> Developer currently based in Laveen, Arizona 🌵</p>
                     <div className="flex pb-6 justify-start items-center ">
                         <a href="https://github.com/BaileyKH" target="_blank"><IconBrandGithub stroke={1} className="w-12 h-12 pr-1 cursor-pointer"/></a>
-                        <a><IconBrandLinkedin stroke={1} className="w-12 h-12" /></a>
+                        <a href="https://www.linkedin.com/in/baileykh/"><IconBrandLinkedin stroke={1} className="w-12 h-12" /></a>
                     </div>
                     <div className="flex items-start">
                     </div>
@@ -27,7 +27,7 @@ export const Hero = () => {
                     </div>
                 </div>
                 <div className="w-1/3 flex justify-end items-start">
-                    <img src={img} className="rounded-full border-4 border-primaryRed" alt="headshot of Bailey Henderson"/>
+                    <img src={img} className="rounded-full border-4 border-primaryGray" alt="headshot of Bailey Henderson"/>
                 </div>
             </div>
         </div>

@@ -44,7 +44,7 @@ export const ContactMe = () => {
                         <IconBrandLinkedin stroke={1} className="w-12 h-12 p-2 mr-4 bg-backgroundWhite rounded-full" />
                         <div className="flex flex-col">
                             <p className="text-primaryRed">Linked-In</p>
-                            <a href="" className="font-light">Bailey Henderson</a>
+                            <a href="https://www.linkedin.com/in/baileykh/" className="font-light">Bailey Henderson</a>
                         </div>
                     </div>
                 </div>
