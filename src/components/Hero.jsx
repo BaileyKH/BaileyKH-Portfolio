@@ -13,7 +13,7 @@ export const Hero = () => {
                     <p className="pb-8 text-lg font-light leading-relaxed">Hello! I'm Bailey Henderson and I am Front-End React <span className="line-through">addict</span> Developer currently based in Laveen, Arizona 🌵</p>
                     <div className="flex pb-6 justify-start items-center ">
                         <a href="https://github.com/BaileyKH" target="_blank"><IconBrandGithub stroke={1} className="w-12 h-12 pr-1 cursor-pointer"/></a>
-                        <a href="https://www.linkedin.com/in/baileykh/"><IconBrandLinkedin stroke={1} className="w-12 h-12" /></a>
+                        <a href="https://www.linkedin.com/in/baileykh/" target="_blank"><IconBrandLinkedin stroke={1} className="w-12 h-12" /></a>
                     </div>
                     <div className="flex items-start">
                     </div>
