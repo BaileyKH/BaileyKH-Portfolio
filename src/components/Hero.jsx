@@ -1,14 +1,14 @@
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3Alt, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
-import img from '/src/assets/headshot-s.jpg'
+import img from '/src/assets/headshot.jpg'
 
 
 export const Hero = () => {
     return(
         <div className="flex justify-center items-center h-screen mx-52 mt-12 px-10">
             <div className="flex">
-                <div className="w-2/3 flex flex-col">
+                <div className="w-2/3 flex flex-col mr-8">
                     <h1 className="text-6xl pb-5 font-bold">Front-End React Developer</h1>
                     <p className="pb-8 text-lg font-light leading-relaxed">Hello! I'm Bailey Henderson and I am Front-End React <span className="line-through">addict</span> Developer currently based in Laveen, Arizona 🌵</p>
                     <div className="flex pb-6 justify-start items-center ">
@@ -16,7 +16,6 @@ export const Hero = () => {
                         <a><IconBrandLinkedin stroke={1} className="w-12 h-12" /></a>
                     </div>
                     <div className="flex items-start">
-                    {/* <a href="./filepath/filename.pdf" download><button className="bg-primaryRed px-3 py-2 rounded-lg text-backgroundWhite">Download Resume</button></a> */}
                     </div>
                     <div className="mt-24 flex justify-start items-center">
                         <h1 className="font-semibold mr-4">Stack |</h1>
