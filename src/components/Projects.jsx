@@ -10,7 +10,7 @@ export const Projects = () => {
                 <h2 className=" text-primaryRed font-semibold">Projects</h2>
                 <p>Elegant Code, Engaging Designs</p>
                 {projects.map((project) => (
-                <div className="flex flex-col md:flex-row md:py-10 justify-evenly items-center bg-white mt-8 md:pl-8 rounded-lg">
+                <div key={project.id} className="flex flex-col md:flex-row md:py-10 justify-evenly items-center bg-white mt-8 md:pl-8 rounded-lg">
                     <div className="w-full md:w-1/2 flex justify-center items-center">
                         <img src={project.img} className="w-fit h-auto rounded-lg"/>
                     </div>
