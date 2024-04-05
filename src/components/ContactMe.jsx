@@ -27,12 +27,12 @@ export const ContactMe = () => {
 
     return(
         <div id="contact" className="bg-white">
-            <div className="flex flex-col px-4 md:px-40 py-28 drop-shadow-lg md:w-2/3 items-center md:items-start">
+            <div className="flex flex-col px-4 md:px-40 py-14 md:py-28 drop-shadow-lg md:w-2/3 items-center md:items-start">
                 <div>
-                    <h2 className="text-primaryRed font-semibold pb-4 md:pb-2 text-center md:text-start">Contact Me!</h2>
+                    <h2 className="text-primaryRed font-semibold pb-6 md:pb-2 text-center md:text-start">Contact Me!</h2>
                     <p className="font-light text-center md:text-start">It is currently <span className="font-semibold">{time}</span>, but please feel free to get in contact with me at your earliest convenience. I am always available!</p>
                 </div>
-                <div className="flex flex-col md:flex-row mt-16 md:justify-between md:items-center">
+                <div className="flex flex-col md:flex-row mt-8 md:mt-16 md:justify-between md:items-center">
                     <div className="flex mr-8 my-4 md:my-0 items-center">
                         <IconMail stroke={1} className="w-12 h-12 p-2 mr-4 bg-backgroundWhite rounded-full"/>
                         <div className="flex flex-col">
