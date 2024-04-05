@@ -18,7 +18,7 @@ export const Hero = () => {
                     <div className="flex items-start">
                     </div>
                     <div className="mt-14 md:mt-24 flex justify-start items-center">
-                        <h1 className="font-semibold mr-4">Stack <span className="hidden md:inline">|</span></h1>
+                        <h1 className="font-light md:font-semibold mr-4">Stack <span className="hidden md:inline">|</span></h1>
                         <FontAwesomeIcon icon={faHtml5} style={{color: "#e54c26",}} className="icon"/>
                         <FontAwesomeIcon icon={faCss3Alt} style={{color: "#264de4",}} className="icon"/>
                         <FontAwesomeIcon icon={faJs} style={{color: "#f0db4f",}} className="icon"/>
