@@ -15,8 +15,8 @@ export const NavBar = () => {
             <div className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <FontAwesomeIcon icon={faBars} className="text-xl"/>
             </div>
-            <div className={`fixed top-16 right-0 w-1/4 h-1/6 bg-white shadow-md z-20 rounded-bl-lg transform ease-in-out transition-all duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}>
-                <div className="flex flex-col gap-6 justify-start items-start text-xs p-4">
+            <div className={`fixed top-16 right-0 w-1/3 h-1/5 bg-white shadow-md z-20 rounded-bl-lg transform ease-in-out transition-all duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}>
+                <div className="flex flex-col gap-6 justify-start items-start text-s p-4">
                     <a href="#aboutme" onClick={() => setIsMenuOpen(false)}>About Me</a>
                     <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a>
                     <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact Me</a>
