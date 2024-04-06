@@ -12,7 +12,7 @@ export const Projects = () => {
                 {projects.map((project) => (
                 <div key={project.id} className="flex flex-col md:flex-row md:py-10 justify-evenly items-center bg-white mt-8 md:pl-8 rounded-lg">
                     <div className="w-full md:w-1/2 flex justify-center items-center">
-                        <img src={project.img} className="w-fit h-auto rounded-lg"/>
+                        <img src={project.img} className="w-fit h-auto rounded-lg" alt={project.title}/>
                     </div>
                     <div className="w-full md:w-1/2 flex flex-col justify-center items-center px-6 py-6 md:py-0">
                         <h3 className="text-xl text-primaryRed font-semibold pb-4">{project.title}</h3>
