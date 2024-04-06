@@ -1,4 +1,4 @@
-import img2 from '/src/assets/aboutme.jpg'
+import img2 from '/src/assets/aboutme.avif'
 
 export const AboutMe = () => {
     return(

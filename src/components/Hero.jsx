@@ -1,7 +1,7 @@
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3Alt, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
-import img from '/src/assets/headshot.jpg'
+import img from '/src/assets/headshot.avif'
 
 
 export const Hero = () => {

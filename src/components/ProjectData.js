@@ -1,5 +1,5 @@
-import Stoked from '/src/assets/Stoked.png'
-import Jammming from '/src/assets/Jammming.png'
+import Stoked from '/src/assets/Stoked.avif'
+import Jammming from '/src/assets/Jammming.avif'
 
 export const projects = [
     {
