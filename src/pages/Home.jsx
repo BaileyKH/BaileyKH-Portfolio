@@ -1,6 +1,7 @@
 import { Hero } from "../components/Hero";
 import { AboutMe } from "../components/AboutMe";
 import { Projects } from "../components/Projects";
+import { NewProjects } from "../components/NewProjects";
 import { ContactMe } from "../components/ContactMe";
 
 export const Home = () => {
@@ -9,6 +10,7 @@ export const Home = () => {
             <Hero />
             <AboutMe />
             <Projects />
+            <NewProjects />
             <ContactMe />
         </div>
     );
