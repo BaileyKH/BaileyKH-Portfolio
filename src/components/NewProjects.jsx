@@ -6,7 +6,7 @@ import { IconCode } from '@tabler/icons-react';
 export const NewProjects = () => {
     return(
         <div id="newprojects" className="flex flex-col">
-            <div className="mx-4 md:mx-40 mb-28 ">
+            <div className="mx-4 md:mx-40 mb-8 ">
                 <h2 className=" text-primaryRed font-semibold mt-8">New Projects</h2>
                 <p>Currently Under Development</p>
                 {newprojects.map((newproject) => (
