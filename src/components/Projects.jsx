@@ -20,10 +20,9 @@ export const Projects = () => {
                         <div className="flex flex-col justify-center items-center mt-4">
                             <h3 className="font-bold text-md tracking-wide">Made With</h3>
                             <div className="flex">
-                                <p className="font-normal text-md px-1">React</p>
-                                <p className="font-normal text-md px-1">CSS</p>
+                                <p className="font-normal text-md px-1">{project.structure}</p>
+                                <p className="font-normal text-md px-1">{project.style}</p>
                             </div>
-                            <p className="font-light text-sm text-center">(Currently being converted from CSS to Tailwind CSS)</p>
                         </div>
                         <div className="flex justify-evenly mt-8">
                             <div className="flex justify-center items-center bg-primaryGray text-white rounded-lg mx-2 py-1 px-2"><a href={project.demo} target="_blank" className="flex justify-center items-center">
