@@ -12,7 +12,6 @@ export const Home = () => {
             <AboutMe />
             <Projects />
             <NewProjects />
-            <Jsprojects />
             <ContactMe />
         </div>
     );
