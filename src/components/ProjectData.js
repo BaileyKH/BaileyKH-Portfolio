@@ -1,4 +1,5 @@
 import Unknown from '/src/assets/Unknown.png'
+import Quizzical from '/src/assets/Quizzical.png'
 import Stoked from '/src/assets/Stoked.avif'
 import Jammming from '/src/assets/Jammming.avif'
 
@@ -15,6 +16,16 @@ export const projects = [
     },
     {
         id: 2,
+        title: "Quizzical",
+        img: Quizzical,
+        description: "Quizzical is an engaging quiz app designed to challenge and entertain users with a variety of questions across multiple categories. Built with React, it features a sleek and responsive design, ensuring a seamless experience on any device. The app also provides instant feedback on answers, enhancing the learning experience.",
+        code: "https://github.com/BaileyKH/quizzical",
+        demo: "https://quizzical-beige.vercel.app/",
+        structure: "React",
+        style: "CSS"
+    },
+    {
+        id: 3,
         title: "Stoked Snowboarding",
         img: Stoked,
         description: "Stoked is a simple ecommerce website that allows users to browse for snowboard equipment. It allows for views of a product page and cart page, while also allowing to filter products by their designated category.",
@@ -24,7 +35,7 @@ export const projects = [
         style: "CSS"
     },
     {
-        id: 3,
+        id: 4,
         title: "Jammming",
         img: Jammming,
         description: "Utilizing the SpotifyAPI, Jammming is a music website that allows a user to search for songs or a specific artist, then displays the most relevant results. After displaying the results, the user can then add thier choice of songs to a custom playlist, which can then be directly saved to their personal spotify account. ",
