@@ -18,7 +18,7 @@ export const projects = [
         id: 2,
         title: "Quizzical",
         img: Quizzical,
-        description: "Quizzical is an engaging quiz app designed to challenge and entertain users with a variety of questions across multiple categories. Built with React, it features a sleek and responsive design, ensuring a seamless experience on any device. The app also provides instant feedback on answers, enhancing the learning experience.",
+        description: "Quizzical is an engaging quiz app that utilizes the Open Trivia Database API and allows users to test their knowledge with multiple-choice questions. Built with React, it features a sleek and responsive design, ensuring a seamless experience on any device. The app also provides instant feedback on answers, enhancing the learning experience.",
         code: "https://github.com/BaileyKH/quizzical",
         demo: "https://quizzical-beige.vercel.app/",
         structure: "React",
