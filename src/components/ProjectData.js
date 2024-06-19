@@ -1,4 +1,4 @@
-import natureShot from 'src/assets/nature-shot.png'
+import natureShot from '/src/assets/nature-shot.png'
 import Unknown from '/src/assets/Unknown.png'
 import Quizzical from '/src/assets/Quizzical.png'
 import Stoked from '/src/assets/Stoked.avif'
