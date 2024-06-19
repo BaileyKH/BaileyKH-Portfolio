@@ -9,7 +9,7 @@ export const projects = [
         id: 1,
         title: "Nature Shot",
         img: natureShot,
-        description: "Nature Shot is a sleek and responsive photography portfolio website built with React. This project showcases stunning nature photography from around the world, emphasizing clean design and seamless user experience. Explore the breathtaking gallery and immerse yourself in the beauty of nature. The website also features form validation on the contact page to ensure reliable communication.",
+        description: "Nature Shot is a sleek and responsive photography portfolio website built with React. This project showcases stunning nature photography from around the world, emphasizing clean design and seamless user experience. Explore the breathtaking gallery and immerse yourself in the beauty of nature. This website also features form validation on the contact page to ensure reliable communication.",
         code: "https://github.com/BaileyKH/nature-shot",
         demo: "https://natureshot.vercel.app/",
         structure: "React",
