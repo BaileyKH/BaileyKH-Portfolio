@@ -1,12 +1,12 @@
 import { newprojects } from "./NewProjectData";
 
-import { IconCode } from '@tabler/icons-react';
+import { IconExternalLink, IconCode } from '@tabler/icons-react';
 
 
 export const NewProjects = () => {
     return(
-        <div id="newprojects" className="flex flex-col">
-            <div className="mx-4 md:mx-40 mb-16 ">
+        <div id="newprojects" className="flex flex-col mt-28">
+            <div className="mx-4 md:mx-40">
                 <h2 className=" text-primaryRed font-semibold mt-8">New Projects</h2>
                 <p>Currently Under Development</p>
                 {newprojects.map((newproject) => (
@@ -21,14 +21,17 @@ export const NewProjects = () => {
                             <h3 className="font-bold text-md tracking-wide">Made With</h3>
                             <div className="flex">
                                 <p className="font-normal text-md px-1">React</p>
-                                <p className="font-normal text-md px-1">Tailwind</p>
+                                <p className="font-normal text-md px-1">Tailwind CSS</p>
                             </div>
                         </div>
                         <div className="flex justify-center mt-8">
-                            <div className="flex bg-primaryGray text-white rounded-lg mx-2 py-1 px-2"><a href={newproject.code} target="_blank" className="flex justify-center items-center">
+                            <div className="flex justify-center items-center bg-primaryGray text-white rounded-lg mx-2 py-1 px-2">
+                                <IconExternalLink stroke={1} className="pr-1"/>
+                                <p className="font-extralight text-sm">Demo: Available Soon</p>
+                            </div>
+                            <div className="flex justify-center items-center bg-primaryGray text-white rounded-lg mx-2 py-1 px-2">
                                 <IconCode stroke={1} className="pr-1"/>
-                                <p className="font-extralight text-sm">Code</p>
-                            </a>
+                                <p className="font-extralight text-sm">Code: Unavailable</p>
                             </div>
                         </div>
                     </div>

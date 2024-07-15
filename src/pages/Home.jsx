@@ -10,8 +10,8 @@ export const Home = () => {
         <div>
             <Hero />
             <AboutMe />
-            <Projects />
             <NewProjects />
+            <Projects />
             <ContactMe />
         </div>
     );

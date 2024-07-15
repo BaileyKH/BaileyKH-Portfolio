@@ -6,7 +6,7 @@ export const Projects = () => {
 
     return(
         <div id="projects" className="flex flex-col">
-            <div className="mx-4 md:mx-40 mt-28 mb-8 ">
+            <div className="mx-4 md:mx-40 mt-28 mb-16 ">
                 <h2 className=" text-primaryRed font-semibold">Projects</h2>
                 <p>Elegant Code, Engaging Designs</p>
                 {projects.map((project) => (

@@ -1,11 +1,10 @@
-import underdev from '/src/assets/underdev.avif'
+import thrive from '/src/assets/thrive.png'
 
 export const newprojects = [
     {
         id: 1,
-        title: "ELEVEN59",
-        img: underdev,
-        description: "ELEVEN59 will redefine collaborative learning with its sleek, user-friendly interface that will bring students together for real-time study sessions, discussions, and resource sharing. This front-end web application will integrate seamlessly with top-tier services for chat and scheduling, making it the perfect platform for learners to connect, share, and thrive academically. Soon you will be able to dive into ELEVEN59 and join a community where education meets innovation.",
-        code: "https://github.com/BaileyKH/ELEVEN59",
+        title: "Thrive Construction",
+        img: thrive,
+        description: "Freelance: I had the opportunity to redesign the website for Thrive Construction, a company dedicated to providing alternative solutions for clients who need the expertise of a large general contractor, but desire the personal service and attention of a small one. My focus was on creating a modern, user-friendly interface that enhances the user experience and effectively communicates the company's mission and services. The redesign involved updating the visual aesthetics, improving site navigation, and ensuring mobile responsiveness to cater to a broader audience.",
     },
 ]
