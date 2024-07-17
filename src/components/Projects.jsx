@@ -32,7 +32,7 @@ export const Projects = () => {
                             </div>
                             <div className="flex bg-primaryGray text-white rounded-lg mx-2 py-1 px-2"><a href={project.code} target="_blank" className="flex justify-center items-center">
                                 <IconCode stroke={1} className="pr-1"/>
-                                <p className="font-extralight text-sm">Code</p>
+                                <p className="font-extralight text-sm">{project.code ? 'Code' : 'Code: Unavailable'}</p>
                             </a>
                             </div>
                         </div>
