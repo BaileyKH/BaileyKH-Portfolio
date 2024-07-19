@@ -7,12 +7,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        creepster: ['"Creepster"'],
         poppins: ['"Poppins", sans-serif;'],
       },
       colors: {
-        primaryGray: "#262831",
-        primaryRed: "#bf0202",
-        backgroundWhite: "#e7ecef"
+        primaryBg: "#160c1f",
+        primaryText: "#ffffff",
+        primaryAccent: "#ff7940"
       }
     },
   },

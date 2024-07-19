@@ -1,32 +1,18 @@
-import { useState } from 'react';
-import { IconSpider } from '@tabler/icons-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
 
 export const NavBar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    return (
-        <nav className="bg-white w-screen md:w-full p-4 md:p-6 flex justify-between items-center shadow-md fixed z-10 top-0 ">
-            <div className='flex justify-center items-center'>
-                <h1><a href="#" className="text-2xl md:text-4xl hover:text-primaryGray">BaileyKH</a></h1>
-                <IconSpider stroke={1} className="w-6 h-6 md:w-8 md:h-8"/>
-            </div>
-            <div className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <FontAwesomeIcon icon={faBars} className="text-xl"/>
-            </div>
-            <div className={`fixed top-16 right-0 w-1/3 h-1/5 bg-white shadow-md z-20 rounded-bl-lg transform ease-in-out transition-all duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}>
-                <div className="flex flex-col gap-6 justify-start items-start text-s p-4">
-                    <a href="#aboutme" onClick={() => setIsMenuOpen(false)}>About Me</a>
-                    <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a>
-                    <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact Me</a>
+    return(
+        <nav className="fixed z-50 top-2 md:top-4 flex justify-center items-center w-full">
+            <div className="flex justify-between items-center w-80 md:w-[800px] px-2 md:px-4 py-1 md:py-2 backdrop-blur-lg border-2 rounded-3xl border-white/50">
+                <div className="">
+                    <a href="#" aria-label="redirects you to the home page" className="font-bold tracking-wider text-primaryAccent text-sm md:text-base">BaileyKH</a>
                 </div>
-            </div>
-            <div className="hidden md:flex gap-6 justify-end items-center text-lg">
-                <a href="#aboutme">About Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact Me</a>
+                <div className="flex space-x-3">
+                    <a href="#about" aria-label="redirects you to the gallery page" className="nav-links">About</a>
+                    <a href="#projects" aria-label="redirects you to the contact page" className="nav-links border-x border-white/50 px-3">Projects</a>
+                    <a href="#contact" aria-label="redirects you to the contact page" className="nav-links">Contact</a>
+                </div>
             </div>
         </nav>
     );
-};
+}
