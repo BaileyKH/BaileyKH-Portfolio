@@ -2,27 +2,182 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-display: swap; 
+  font-family: 'Creepster';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/creepster-v13-latin-regular.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v21-latin-regular.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/poppins-v21-latin-200.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/poppins-v21-latin-700.woff2') format('woff2'); 
+}
+
 @layer base {
   html {
-    @apply bg-backgroundWhite font-poppins text-primaryGray scroll-smooth
+    @apply scroll-smooth
   }
-  h1{
-    @apply text-3xl font-black tracking-wide
+
+  body {
+    @apply font-poppins bg-primaryBg overflow-x-hidden
   }
-  h2{
-    @apply text-2xl tracking-wide
+
+  .nav-links {
+    @apply text-primaryAccent text-xs md:text-sm lg:text-base transition-colors duration-300 ease-in-out hover:text-white
   }
-  p,
-  a{
-    @apply font-semibold tracking-wide
+
+  .hero-gradient {
+    background: rgb(46,24,71);
+    background: radial-gradient(circle, rgba(46,24,71,1) 0%, rgba(22,12,31,1) 100%);
   }
-  a{
-    @apply no-underline transition hover:text-primaryRed cursor-pointer
-  }
+
   .icon{
-    @apply text-2xl md:text-5xl mr-6 transition hover:-translate-y-2 ease-in-out
+    @apply text-2xl md:text-3xl lg:text-4xl mr-6 transition hover:-translate-y-2 ease-in-out
   }
-  .about-me {
-    @apply text-white
+
+  /* Head Shot Animation */
+  .image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
   }
+  
+  .animated-image {
+    display: block;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 5px; /* Adjust padding as needed for border width */
+    background: conic-gradient(
+      rgba(253, 182, 87, 1),
+      rgba(222, 117, 89, 1),
+      rgba(117, 43, 91, 1),
+      rgba(46, 24, 71, 1),
+      rgba(253, 182, 87, 1)
+    );
+    mask: 
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    animation: rotate-animation 5s infinite linear;
+    pointer-events: none;
+  }
+
+  @keyframes rotate-animation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .background-gradient {
+    background: linear-gradient(
+    318deg,
+    rgba(253, 182, 87, 1) 4%,
+    rgba(222, 117, 89, 1) 25%,
+    rgba(117, 43, 91, 1) 53%,
+    rgba(46, 24, 71, 1) 81%
+  );
+  }
+
+  .project-gradient {
+    background: linear-gradient(
+    318deg,
+    rgba(46, 24, 71, 1) 19%,
+    rgba(117, 43, 91, 1) 47%,
+    rgba(222, 117, 89, 1) 75%,
+    rgba(253, 182, 87, 1) 96%
+  );
+  }
+
+  /* Bounce Animation */
+  .bounce{
+    animation: bounce 2.5s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(-12%);
+      animationTimingFunction: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  /* Contact Success Animation */
+  .circle {
+    stroke-dasharray: 1194;
+    stroke-dashoffset: 1194;
+    animation: dc 1s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .tick {
+    stroke-dasharray: 350;
+    stroke-dashoffset: 350;
+    animation: dt 0.8s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+  .success {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.1s; 
+    opacity: 0; 
+  }
+  @keyframes dc {
+    from {
+      stroke-dashoffset: 1194;
+    }
+    to {
+      stroke-dashoffset: 2388;
+    }
+  }
+  @keyframes dt {
+    from {
+      stroke-dashoffset: 350;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+ 
 }
