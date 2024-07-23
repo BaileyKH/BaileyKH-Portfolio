@@ -10,6 +10,8 @@ import ghost from '/src/assets/hero-ghost-2.png'
 
 import aboutImg from '/src/assets/aboutme.avif'
 import spider from '/src/assets/about-spider.png'
+import { Projects } from "../components/Projects";
+import { Contact } from "../components/Contact";
 
 export const Home = () => {
     return(
@@ -20,7 +22,7 @@ export const Home = () => {
                         <img src={homeHero} className="brightness-50 w-full"/>
                     </div>
                     <div className="absolute z-10 flex justify-center items-center w-full">
-                        <div className="relative w-1/2 flex flex-col items-start justify-start hero-gradient ml-12 px-12 py-12 rounded-md shadow-xl">
+                        <div className="relative w-1/2 flex flex-col items-start justify-center hero-gradient ml-16 px-12 py-12 rounded-md shadow-xl">
                             <div className="absolute -top-12 -right-12 z-10">
                                 <img src={ghost} className="bounce drop-shadow-md"/>
                             </div>
@@ -47,7 +49,7 @@ export const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-1/2 flex flex-col justify-center items-center mr-12">
+                        <div className="w-1/2 flex flex-col justify-center items-center mr-16">
                             <div className="w-max h-max image-container">
                                 <div className="image-border"></div>
                                 <img src={headShot} className="w-[300px] animated-image"/>
@@ -63,7 +65,7 @@ export const Home = () => {
                             <img src={spider} className="bounce drop-shadow-md"/>
                         </div>
                         <div className="flex flex-col justify-center items-start p-[40px]">
-                            <h2 className="font-creepster tracking-widest text-5xl text-primaryAccent font-semibold pb-4">ABOUT ME</h2>
+                            <h2 className="font-creepster tracking-widest text-4xl text-primaryAccent font-semibold pb-4">ABOUT ME</h2>
                             <h2 className="font-bold text-lg text-primaryText">Front-End React Developer</h2>
                             <h2 className="text-lg text-primaryText pb-6">Based in Laveen, Arizona 🌵</h2>
                             <p className="font-light text-primaryText pb-4">Hey there! My name is Bailey Henderson and I am a passionate Front-End React Developer who specializes in bringing creative concepts to life through clean, efficient, and accessible code. </p>
@@ -74,6 +76,12 @@ export const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section>
+                <Projects />
+            </section>
+            <section>
+                <Contact />
             </section>
         </main>
     );

@@ -35,8 +35,12 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth
+  }
+
   body {
-    @apply scroll-smooth font-poppins bg-primaryBg overflow-x-hidden
+    @apply font-poppins bg-primaryBg overflow-x-hidden
   }
 
   .nav-links {
@@ -100,7 +104,6 @@
     }
   }
   
-
   .background-gradient {
     background: linear-gradient(
     318deg,
@@ -108,6 +111,16 @@
     rgba(222, 117, 89, 1) 25%,
     rgba(117, 43, 91, 1) 53%,
     rgba(46, 24, 71, 1) 81%
+  );
+  }
+
+  .project-gradient {
+    background: linear-gradient(
+    318deg,
+    rgba(46, 24, 71, 1) 19%,
+    rgba(117, 43, 91, 1) 47%,
+    rgba(222, 117, 89, 1) 75%,
+    rgba(253, 182, 87, 1) 96%
   );
   }
 
