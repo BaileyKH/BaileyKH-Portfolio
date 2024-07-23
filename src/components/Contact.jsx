@@ -137,13 +137,13 @@ export const Contact = () => {
     return(
         <div id="contact" className="background-gradient">
             <div className="">
-                <div className="flex flex-col px-4 md:px-40 py-14 md:py-28 drop-shadow-lg items-center md:items-start">
+                <div className="flex flex-col px-12 xl:px-40 py-14 xl:py-28 drop-shadow-lg items-center md:items-start">
                     <div>
                         <h2 className="text-primaryAccent font-creepster tracking-widest text-4xl pb-6 md:pb-2 text-center md:text-start">Contact Me!</h2>
                         <p className="font-light text-primaryText text-center md:text-start">It is currently <span className="font-semibold text-primaryAccent">{time}</span>, but please feel free to get in contact with me at your earliest convenience. I am always available!</p>
                     </div>
                     <div className="relative w-full">
-                        <div className="my-12 md:w-[700px] lg:w-[800px]">
+                        <div className="my-12 md:w-[650px] lg:w-[800px]">
                             <form id="contact-form" onSubmit={handleSubmit}>
                                 <div className="border-2 border-primaryAccent rounded-md p-4">
                                     <div className="grid grid-cols-1 gap-x-6 gap-y-4 md:gap-y-8 sm:grid-cols-6">
