@@ -37,7 +37,7 @@ export const Home = () => {
                                 </a>
                             </div>
                             <div className="mt-4 md:mt-10 lg:mt-16 flex justify-start items-center w-full space-x-5">
-                                <div className="border-r-2 border-r-primaryAccent">
+                                <div className="border-r-2 border-r-primaryAccent mr-2 md:mr-4 lg:mr-8 xl:mr-0">
                                     <p className="font-creepster tracking-widest text-primaryAccent text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pr-2 lg:pr-4">Stack</p>
                                 </div>
                                 <div className="flex justify-center items-center">
@@ -46,6 +46,7 @@ export const Home = () => {
                                     <FontAwesomeIcon icon={faJs} style={{color: "#f0db4f",}} className="icon" alt="javascript logo"/>
                                     <FontAwesomeIcon icon={faReact} style={{color: "#61dbfb",}} className="icon" alt="react logo"/>
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" className="h-[21px] w-[21px] md:h-[26px] md:w-[26px] lg:h-[42px] lg:w-[42px] icon" alt="tailwind css logo"/>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" className="h-[17px] w-[17px] md:h-[22px] md:w-[22px] lg:h-[38px] lg:w-[38px] icon" alt="figma logo"/>
                                 </div>
                             </div>
                         </div>
