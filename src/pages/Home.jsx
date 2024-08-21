@@ -37,16 +37,19 @@ export const Home = () => {
                                 </a>
                             </div>
                             <div className="mt-4 md:mt-10 lg:mt-16 flex justify-start items-center w-full space-x-5">
-                                <div className="border-r-2 border-r-primaryAccent mr-2 md:mr-4 lg:mr-8 xl:mr-0">
+                                <div className="border-r-2 border-r-primaryAccent lg:mr-8 xl:mr-0">
                                     <p className="font-creepster tracking-widest text-primaryAccent text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pr-2 lg:pr-4">Stack</p>
                                 </div>
-                                <div className="flex justify-center items-center">
+                                <div className="flex justify-center items-center flex-wrap">
+                                    <FontAwesomeIcon icon={faJs} style={{color: "#f0db4f",}} className="icon h-[21px] w-[21px] md:h-[26.25px] md:w-[26.25px] lg:h-[31.5px] lg:w-[31.5px]" alt="javascript logo"/>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" className="h-[21px] w-[21px] md:h-[26.25px] md:w-[26.25px] lg:h-[31.5px] lg:w-[31.5px] icon" alt="tailwind css logo"/>
                                     <FontAwesomeIcon icon={faHtml5} style={{color: "#e54c26",}} className="icon" alt="html logo"/>
                                     <FontAwesomeIcon icon={faCss3Alt} style={{color: "#264de4",}} className="icon" alt="css logo"/>
-                                    <FontAwesomeIcon icon={faJs} style={{color: "#f0db4f",}} className="icon" alt="javascript logo"/>
                                     <FontAwesomeIcon icon={faReact} style={{color: "#61dbfb",}} className="icon" alt="react logo"/>
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" className="h-[21px] w-[21px] md:h-[26px] md:w-[26px] lg:h-[42px] lg:w-[42px] icon" alt="tailwind css logo"/>
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" className="h-[17px] w-[17px] md:h-[22px] md:w-[22px] lg:h-[38px] lg:w-[38px] icon" alt="figma logo"/>
+                                    <div className="flex my-2 lg:md-0">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" className="h-[21px] w-[21px] md:h-[26.25px] md:w-[26.25px] lg:h-[31.5px] lg:w-[31.5px] icon" alt="tailwind css logo"/>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" className="h-[21px] w-[21px] md:h-[26.25px] md:w-[26.25px] lg:h-[31.5px] lg:w-[31.5px] icon" alt="figma logo"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +73,7 @@ export const Home = () => {
                             <h2 className="font-bold text-base md:text-lg text-primaryText">Front-End React Developer</h2>
                             <h2 className="text-base md:text-lg text-primaryText pb-6">Based in Laveen, Arizona 🌵</h2>
                             <p className="text-sm md:text-base font-light text-primaryText pb-4">Hey there! My name is Bailey Henderson and I am a passionate Front-End React Developer who specializes in bringing creative concepts to life through clean, efficient, and accessible code. </p>
-                            <p className="text-sm md:text-base font-light text-primaryText">My tech stack currently consists of React, JavaScript, and Tailwind CSS</p>
+                            <p className="text-sm md:text-base font-light text-primaryText">My tech stack currently consists of React, JavaScript, and Tailwind CSS, however I am currently transitioning more into TypeScript!</p>
                         </div>
                         <div className="md:p-[40px]">
                             <img src={aboutImg} className="md:rounded-md w-[1200px]"/>
