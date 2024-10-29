@@ -11,7 +11,7 @@ export const projects = [
         id: 1,
         title: "Spooky Bros",
         img: dutchBros,
-        description: "My (spooky) interpretation of the Dutch Bros website",
+        description: "My (spooky) interpretation of the Dutch Bros Coffee website",
         code: "https://github.com/BaileyKH/DutchClone",
         demo: "https://www.spookybros.vercel.app/",
         structure: "React",
