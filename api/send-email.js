@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     try {
       // Send confirmation email to the user
       await resend.emails.send({
-        from: 'hen.baileyk@gmail.com',
+        from: 'no-reply@baileykh.dev',
         to: email,
         subject: 'Thank you for your message',
         html: `<p>Dear ${name},</p><p>Thank you for reaching out. We have received your message.</p>`,
@@ -34,10 +34,11 @@ export default async function handler(req, res) {
 
       // Send notification email to the client
       await resend.emails.send({
-        from: email,
+        from: 'no-reply@baileykh.dev',
         to: 'hen.baileyk@gmail.com',
         subject: `New Contact Form Submission from ${name}`,
         html: `<p>You have received a new message from ${name} (${email}).</p>`,
+        reply_to: email
       });
 
       res.status(200).json({ status: 'Emails sent successfully' });
