@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
   // Define allowed origin for CORS (replace with your specific domain if needed)
-  const allowedOrigin = 'https://www.baileykh.dev';
+  const allowedOrigin = 'baileykh.dev';
 
   // Add CORS headers to the response
   res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
