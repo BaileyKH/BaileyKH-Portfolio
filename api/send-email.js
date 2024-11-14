@@ -34,7 +34,7 @@ export default async function handler(req, res) {
 
       // Send notification email to the client
       await resend.emails.send({
-        from: 'no-reply@baileykh.dev',
+        from: `${name} <bkhcontact@baileykh.dev>`,
         to: 'hen.baileyk@gmail.com',
         subject: `New Contact Form Submission from ${name}`,
         html: `<p>You have received a new message from ${name} (${email}).</p>`,
