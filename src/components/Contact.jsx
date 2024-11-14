@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-import emailjs from '@emailjs/browser';
+import { supabase } from '/src/supabaseDB.js';
+// import emailjs from '@emailjs/browser';
 
 import { IconMail, IconBrandLinkedin } from '@tabler/icons-react';
 
@@ -8,13 +9,15 @@ export const Contact = () => {
 
     const [time, setTime] = useState('');
 
-    const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        companyName: "",
-        message: ""
-    });
+    // const [formData, setFormData] = useState({
+    //     firstName: "",
+    //     lastName: "",
+    //     email: "",
+    //     companyName: "",
+    //     message: ""
+    // });
+
+    const [formData, setFormData] = useState({ first_name: '', last_name: '', email: '' });
 
     const [errors, setErrors] = useState({});
 
@@ -75,49 +78,76 @@ export const Contact = () => {
     }
 
     // Submit Handling for Contact Form / EmailJS
-    const handleSubmit = async (e) => {
-        e.preventDefault()
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault()
 
-        const isValid = validateForm();
+    //     const isValid = validateForm();
 
-        if (isValid) {
-            console.log("Form Submitted", formData)
-            // EmailJS Keys
-            const serviceId = 'service_uptzmv2'
-            const templateKey = 'template_1jpp6bb'
-            const publicKey = 'gtV00-4thiXjz-TXJ'
+    //     if (isValid) {
+    //         console.log("Form Submitted", formData)
+    //         // EmailJS Keys
+    //         const serviceId = 'service_uptzmv2'
+    //         const templateKey = 'template_1jpp6bb'
+    //         const publicKey = 'gtV00-4thiXjz-TXJ'
 
-            // EmailJS object for template params
-            const templateParams = {
-                to_name: 'Bailey',
-                from_name: `${formData.firstName} ${formData.lastName}`,
-                from_email: formData.email,
-                from_company: formData.companyName,
-                message: formData.message
-            };
+    //         // EmailJS object for template params
+    //         const templateParams = {
+    //             to_name: 'Bailey',
+    //             from_name: `${formData.firstName} ${formData.lastName}`,
+    //             from_email: formData.email,
+    //             from_company: formData.companyName,
+    //             message: formData.message
+    //         };
 
-            // Send email using EmailJS
-            emailjs.send(serviceId, templateKey, templateParams, publicKey)
-                .then((res) => {
-                    console.log("Email sent successfully!", res);
-                    setFormData({
-                        ...formData,
-                        firstName: "",
-                        lastName: "",
-                        email: "",
-                        companyName: "",
-                        message: ""
-                    })
-            })
-            .catch((error) => {
-                console.error('Error sending email:', error)
-            });
+    //         // Send email using EmailJS
+    //         emailjs.send(serviceId, templateKey, templateParams, publicKey)
+    //             .then((res) => {
+    //                 console.log("Email sent successfully!", res);
+    //                 setFormData({
+    //                     ...formData,
+    //                     firstName: "",
+    //                     lastName: "",
+    //                     email: "",
+    //                     companyName: "",
+    //                     message: ""
+    //                 })
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error sending email:', error)
+    //         });
 
-            setSubmit(true);
-        } else {
-            console.log("Form Validation Failed")           
+    //         setSubmit(true);
+    //     } else {
+    //         console.log("Form Validation Failed")           
+    //     }
+    // }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        try {
+          // Store submission in Supabase
+          const { data, error } = await supabase
+            .from('contact_form_submissions')
+            .insert([{ ...formData }]);
+          
+          if (error) throw error;
+          console.log('Data inserted successfully:', data);
+    
+          // Send notification emails via Vercel function
+          const response = await fetch('https://your-vercel-project.vercel.app/api/send-email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+          });
+    
+          if (!response.ok) throw new Error('Email sending failed');
+          console.log('Emails sent successfully');
+          alert('Your message has been sent!');
+        } catch (error) {
+          console.error('Error:', error.message);
         }
-    }
+    };
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -149,7 +179,7 @@ export const Contact = () => {
                                     <div className="grid grid-cols-1 gap-x-6 gap-y-4 md:gap-y-8 sm:grid-cols-6">
                                         <div className="sm:col-span-3">
                                             <label
-                                                htmlFor="first-name"
+                                                htmlFor="first_name"
                                                 className="block text-sm font-medium leading-6 text-white/90"
                                             >
                                                 First name
@@ -157,20 +187,20 @@ export const Contact = () => {
                                             <div className="mt-2">
                                                 <input
                                                     type="text"
-                                                    name="firstName"
-                                                    id="first-name"
-                                                    value={formData.firstName}
+                                                    name="first_name"
+                                                    id="first_name"
+                                                    value={formData.first_name}
                                                     onChange={handleChange}
                                                     autoComplete="given-name"
-                                                    className={`block w-full rounded-md border-0 p-1.5 text-white/90 shadow-sm ring-1 ring-inset ${errors.firstName ? `ring-red-500` : `ring-white/60`} bg-white/10 focus:ring-2 focus:ring-inset ${errors.firstName ? 'focus:ring-red-500' : 'focus:ring-primaryAccent'} sm:text-sm sm:leading-6`}
+                                                    className={`block w-full rounded-md border-0 p-1.5 text-white/90 shadow-sm ring-1 ring-inset ${errors.first_name ? `ring-red-500` : `ring-white/60`} bg-white/10 focus:ring-2 focus:ring-inset ${errors.first_name ? 'focus:ring-red-500' : 'focus:ring-primaryAccent'} sm:text-sm sm:leading-6`}
                                                 />
-                                                {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>}
+                                                {errors.first_name && <p className="text-red-500 text-sm mt-1">{errors.first_name}</p>}
                                             </div>
                                         </div>
 
                                         <div className="sm:col-span-3">
                                             <label
-                                                htmlFor="last-name"
+                                                htmlFor="last_name"
                                                 className="block text-sm font-medium leading-6 text-white/90"
                                             >
                                                 Last name
@@ -178,14 +208,14 @@ export const Contact = () => {
                                             <div className="mt-2">
                                                 <input
                                                     type="text"
-                                                    name="lastName"
-                                                    id="last-name"
-                                                    value={formData.lastName}
+                                                    name="last_name"
+                                                    id="last_name"
+                                                    value={formData.last_name}
                                                     onChange={handleChange}
                                                     autoComplete="family-name"
-                                                    className={`block w-full rounded-md border-0 p-1.5 text-white/90 shadow-sm ring-1 ring-inset ${errors.lastName ? `ring-red-500` : `ring-white/60`} bg-white/10 placeholder:text-gray-400 focus:ring-2 focus:ring-inset ${errors.lastName ? 'focus:ring-red-500' : 'focus:ring-primaryAccent'} sm:text-sm sm:leading-6`}
+                                                    className={`block w-full rounded-md border-0 p-1.5 text-white/90 shadow-sm ring-1 ring-inset ${errors.last_name ? `ring-red-500` : `ring-white/60`} bg-white/10 placeholder:text-gray-400 focus:ring-2 focus:ring-inset ${errors.last_name ? 'focus:ring-red-500' : 'focus:ring-primaryAccent'} sm:text-sm sm:leading-6`}
                                                 />
-                                                {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
+                                                {errors.last_name && <p class_name="text-red-500 text-sm mt-1">{errors.last_name}</p>}
                                             </div>
                                         </div>
 
@@ -211,7 +241,7 @@ export const Contact = () => {
                                             </div>
                                         </div>
 
-                                        <div className="sm:col-span-3">
+                                        {/* <div className="sm:col-span-3">
                                             <label
                                                 htmlFor="companyName"
                                                 className="block text-sm font-medium leading-6 text-white/90"
@@ -229,9 +259,9 @@ export const Contact = () => {
                                                 />
                                                 {errors.companyName && <p className="text-red-500 text-sm mt-1">{errors.companyName}</p>}
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
-                                    <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 mt-8">
+                                    {/* <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 mt-8">
                                         <div className="col-span-full">
                                             <label
                                                 htmlFor="message"
@@ -251,7 +281,7 @@ export const Contact = () => {
                                                 {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="mt-8 flex items-center justify-center gap-x-6">
                                         <button
                                             type="submit"
@@ -293,7 +323,7 @@ export const Contact = () => {
                                         <p className="text-[#68E534] success">Success</p>
                                     </div>
                                     <p className="text-primaryAccent font-bold text-lg">
-                                        Thank You {formData.firstName.charAt(0).toUpperCase() + formData.firstName.slice(1).toLowerCase()}
+                                        Thank You {formData.first_name.charAt(0).toUpperCase() + formData.first_name.slice(1).toLowerCase()}
                                     </p>
                                     <p className="text-white text-sm text-center my-2">
                                         I appreciate you considering me for an opportunity to be a part of your team! I will be in contact with you as soon as possible.
