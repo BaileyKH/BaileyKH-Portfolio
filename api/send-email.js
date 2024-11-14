@@ -38,7 +38,7 @@ export default async function handler(req, res) {
         to: 'hen.baileyk@gmail.com',
         subject: `New Contact Form Submission from ${name}`,
         html: `<p>You have received a new message from ${name} (${email}).</p>`,
-        reply_to: email
+        replyTo: email
       });
 
       res.status(200).json({ status: 'Emails sent successfully' });
