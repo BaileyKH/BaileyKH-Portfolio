@@ -135,7 +135,7 @@ export const Contact = () => {
           console.log('Data inserted successfully:', data);
     
           // Send notification emails via Vercel function
-          const response = await fetch('https://your-vercel-project.vercel.app/api/send-email', {
+          const response = await fetch('https://www.baileykh.dev/api/send-email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData),
