@@ -4,17 +4,17 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
-  // Define allowed origin for CORS (replace with your specific domain if needed)
-  const allowedOrigin = 'baileykh.dev';
 
-  // Add CORS headers to the response
+  const allowedOrigin = 'www.baileykh.dev';
+
+  // Added CORS headers to the response
   res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   // Handle preflight request
   if (req.method === 'OPTIONS') {
-    res.status(200).end(); // Respond OK to preflight requests
+    res.status(200).end(); 
     return;
   }
 
